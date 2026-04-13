@@ -1,5 +1,5 @@
 import { ArrowDown, Mail, Sparkles } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterXIcon } from "./SocialIcons";
+import { GithubIcon, LinkedinIcon } from "./SocialIcons";
 import { personalInfo } from "../data/portfolio";
 
 export default function Hero() {

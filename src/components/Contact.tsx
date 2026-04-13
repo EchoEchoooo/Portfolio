@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 import { Mail, Send, CheckCircle, MessageSquare, Clock } from "lucide-react";
-import { GithubIcon, LinkedinIcon, TwitterXIcon } from "./SocialIcons";
+import { GithubIcon, LinkedinIcon } from "./SocialIcons";
 import { personalInfo } from "../data/portfolio";
 import { SectionHeader } from "./About";
 
