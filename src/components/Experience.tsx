@@ -54,7 +54,18 @@ export default function Experience() {
                       </div>
                     </div>
 
-                    <p className="text-sm text-slate-400 leading-relaxed mb-4">{job.description}</p>
+                    {"highlights" in job && job.highlights ? (
+                      <ul className="space-y-2 mb-4">
+                        {job.highlights.map((item) => (
+                          <li key={item} className="flex gap-2 text-sm text-slate-400 leading-relaxed">
+                            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cyan-500/70" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-sm text-slate-400 leading-relaxed mb-4">{job.description}</p>
+                    )}
 
                     <div className="flex flex-wrap gap-2">
                       {job.technologies.map((tech) => (

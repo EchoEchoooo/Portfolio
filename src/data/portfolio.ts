@@ -6,7 +6,7 @@ export const personalInfo = {
   location: "Pampanga",
   github: "https://github.com/EchoEchoooo?tab=repositories",
   linkedin: "https://www.linkedin.com/in/geryko-luis-manarang-b2011427a/",
-  resumeUrl: "https://drive.google.com/file/d/1e_XkGw7dJ_sQ0VvqR5iCXQlegY3UudX3/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1EHOd_dwn_BkMC57cAxMwIit4QJpwSNZ5/view?usp=sharing",
   avatarUrl: "/avatar.png",
   bio: [
     "I am proficient in problem-solving, algorithm design, and software development principles.",
@@ -80,6 +80,19 @@ export const projects = [
 export const experience = [
   {
     id: 1,
+    role: "Custom Software Engineering Associate",
+    company: "Accenture Philippines",
+    period: "May 2026 - Present",
+    location: "Philippines",
+    highlights: [
+      "Collaborate with cross-functional teams to deliver quality software and meet business requirements.",
+      "Build expertise in test automation using Selenium and other industry-standard tools.",
+      "Participate in technical training programs focused on automation testing and software quality engineering.",
+    ],
+    technologies: ["Selenium", "Test Automation", "Software Quality Engineering"],
+  },
+  {
+    id: 2,
     role: "Software Developer Intern",
     company: "Nomis Asia Limited",
     period: "December 2024 - July 2025",
@@ -87,7 +100,7 @@ export const experience = [
     description:
       "Collaborated with a team to migrate an API to .NET 8, improving compatibility, performance, and security while ensuring seamless integration and functionality.",
     technologies: [".NET 8", "C#", "API Migration"],
-  }
+  },
 ];
 
 export const navLinks = [

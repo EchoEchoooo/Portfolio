@@ -9,8 +9,8 @@ const categoryIcons: Record<string, React.ElementType> = {
 };
 
 const categoryColors: Record<string, string> = {
-  Frontend:       "from-cyan-400 to-sky-400",
-  Backend:        "from-teal-400 to-emerald-400",
+  Frontend: "from-cyan-400 to-sky-400",
+  Backend: "from-teal-400 to-emerald-400",
   "DevOps & Tools": "from-sky-400 to-indigo-400",
 };
 
@@ -21,6 +21,10 @@ const extraTech = [
   "MySQL",
   "Docker",
   "GitHub",
+  "React Native",
+  "Node.js",
+  "Selenium",
+  "Postman",
 ];
 
 export default function Skills() {
@@ -35,7 +39,8 @@ export default function Skills() {
         <div className="mt-20 grid md:grid-cols-3 gap-6">
           {skills.map((group) => {
             const Icon = categoryIcons[group.category] ?? Layers;
-            const grad = categoryColors[group.category] ?? "from-cyan-400 to-teal-400";
+            const grad =
+              categoryColors[group.category] ?? "from-cyan-400 to-teal-400";
             return (
               <div
                 key={group.category}
@@ -43,7 +48,9 @@ export default function Skills() {
               >
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-7">
-                  <div className={`w-9 h-9 rounded-xl bg-gradient-to-br ${grad} flex items-center justify-center text-slate-900 shadow-lg`}>
+                  <div
+                    className={`w-9 h-9 rounded-xl bg-gradient-to-br ${grad} flex items-center justify-center text-slate-900 shadow-lg`}
+                  >
                     <Icon size={16} />
                   </div>
                   <h3 className="font-bold text-slate-200">{group.category}</h3>
@@ -54,8 +61,12 @@ export default function Skills() {
                   {group.items.map((skill) => (
                     <li key={skill.name}>
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm text-slate-300 font-medium">{skill.name}</span>
-                        <span className="text-xs text-slate-500 font-mono">{skill.level}%</span>
+                        <span className="text-sm text-slate-300 font-medium">
+                          {skill.name}
+                        </span>
+                        <span className="text-xs text-slate-500 font-mono">
+                          {skill.level}%
+                        </span>
                       </div>
                       <div className="h-1.5 bg-slate-800 rounded-full overflow-hidden">
                         <div
@@ -78,7 +89,10 @@ export default function Skills() {
           </p>
           <div className="flex flex-wrap justify-center gap-2.5">
             {extraTech.map((tech) => (
-              <span key={tech} className="tag hover:bg-cyan-500/15 hover:text-cyan-200 transition-colors duration-200 cursor-default">
+              <span
+                key={tech}
+                className="tag hover:bg-cyan-500/15 hover:text-cyan-200 transition-colors duration-200 cursor-default"
+              >
                 {tech}
               </span>
             ))}
